@@ -91,6 +91,7 @@ const clock = new THREE.Clock();
 const tick = () => {
     const elapsedTime = clock.getElapsedTime();
     controls.update();
+    galaxy.rotation.y = elapsedTime / 500;
 
     renderer.render(scene, camera);
     window.requestAnimationFrame(tick);
